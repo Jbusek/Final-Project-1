@@ -58,6 +58,7 @@ class Logic(QMainWindow):
         self.save_vote(identification, candidate)
 
         self.label_status.setText(f"Vote cast for {candidate}")
+        self.reset()
 
     def save_vote(self, identification, candidate):
         with open('votes.csv', mode='a', newline='') as file:
